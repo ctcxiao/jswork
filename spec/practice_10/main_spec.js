@@ -41,7 +41,7 @@ describe("Person", () => {
         describe("#introduce", () => {
             it("should overwrite Person introduce, introduce with name, age and class number", () => {
                 const student = new Student(1, "Tom", 21, klass);
-                const introduce = person.introduce();
+                const introduce = student.introduce();
                 expect(introduce).to.equal("My name is Tom. I am 21 years old. I am a Student. I am at Class 2.");
             });
 
@@ -50,7 +50,7 @@ describe("Person", () => {
                 const student = new Student(1, "Tom", 21, klass);
 
                 klass.assignLeader(student);
-                const introduce = person.introduce();
+                const introduce = student.introduce();
 
                 expect(introduce).to.equal("My name is Tom. I am 21 years old. I am a Student. I am Leader of Class 2.");            
             });
@@ -76,13 +76,13 @@ describe("Person", () => {
         describe("#introduce", () => {
             it("should overwrite Person introduce, introduce with name, age and class number, given teacher have class", () => {
                 const teacher = new Teacher(1, "Tom", 21, klasses);
-                const introduce = person.introduce();
+                const introduce = teacher.introduce();
                 expect(introduce).to.equal("My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2, 3.");
             });
 
             it("should overwrite Person introduce, introduce with name, age and class number, given teacher have no class", () => {
                 const teacher = new Teacher(1, "Tom", 21);
-                const introduce = person.introduce();
+                const introduce = teacher.introduce();
                 expect(introduce).to.equal("My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.");
             });
         });
