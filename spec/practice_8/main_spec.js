@@ -115,7 +115,8 @@ describe("Class", () => {
 
             klass.assignLeader(student);
 
-            expect(klass.leader).not.equal(student);
+            expect(otherKlass.leader).not.equal(student);
         });
+
     });
 });
