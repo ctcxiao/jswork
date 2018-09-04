@@ -17,9 +17,9 @@ export default class Teacher extends Person{
 
     introduceWith(student){
         if (student.klass === this.klass){
-            return super.introduce()+" I am a Teacher. I teach "+student.name+".";
+            return super.introduce()+` I am a Teacher. I teach ${student.name}.`;
         }
-        return super.introduce()+" I am a Teacher. I don't teach "+student.name+".";
+        return super.introduce()+` I am a Teacher. I don't teach ${student.name}.`;
     }
 
     introduce() {
@@ -29,10 +29,10 @@ export default class Teacher extends Person{
     }
 
     sayStudentHasJoin(student){
-        console.log("I am "+this.name+". I know "+student.name+" has joined Class "+student.klass.number+".")
+        console.log(`I am ${this.name}. I know ${student.name} has joined Class ${student.klass.number}.`)
     }
 
     sayStudentHasBecomeLeader(student){
-        console.log("I am "+this.name+". I know "+student.name+" become Leader of Class "+student.klass.number+".")
+        console.log(`I am ${this.name}. I know ${student.name} become Leader of Class ${student.klass.number}.`)
     }
 }

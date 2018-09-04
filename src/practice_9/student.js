@@ -16,10 +16,9 @@ export default class Student extends Person{
 
     introduce() {
         if (this.klass.leader === this){
-            return super.introduce()+' I am a Student. I am Leader of Class 2.';
+            return super.introduce()+` I am a Student. I am Leader of Class ${this.klass.number}.`;
         }
-        return super.introduce()+' I am a Student. I am at Class 2.';
+        return super.introduce()+` I am a Student. I am at Class ${this.klass.number}.`;
     }
-
 
 }

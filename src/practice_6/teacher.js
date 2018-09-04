@@ -14,7 +14,7 @@ export default class Teacher extends Person{
     }
 
     introduce() {
-        return super.introduce()+(this.klass?' I am a Teacher. I teach Class 2.'
+        return super.introduce()+(this.klass?` I am a Teacher. I teach Class ${this.klass}.`
             :' I am a Teacher. I teach No Class.');
     }
 

@@ -17,9 +17,9 @@ export default class Teacher extends Person{
 
     introduceWith(student){
         if (student.klass === this.klass){
-            return super.introduce()+" I am a Teacher. I teach "+student.name+".";
+            return super.introduce()+` I am a Teacher. I teach ${student.name}.`;
         }
-        return super.introduce()+" I am a Teacher. I don't teach "+student.name+".";
+        return super.introduce()+` I am a Teacher. I don't teach ${student.name}.`;
     }
 
     introduce() {
