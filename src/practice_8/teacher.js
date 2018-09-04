@@ -7,7 +7,7 @@ export default class Teacher extends Person{
     klass;
     klassNumber;
 
-    constructor(klassNumber, name, age, klass=null) {
+    constructor(klassNumber, name, age, klass) {
         super(name, age);
         this.name = name;
         this.age = age;

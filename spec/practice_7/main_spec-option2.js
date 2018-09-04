@@ -44,7 +44,7 @@ describe("Option-2 Person", () => {
 
         it("should overwrite Person introduce, introduce with name, age and class number", () => {
             const student = new Student("Tom", 21, klass);
-            const introduce = person.introduce();
+            const introduce = student.introduce();
 
             expect(introduce).to.equal("My name is Tom. I am 21 years old. I am a Student. I am at Class 2.");
 
@@ -69,7 +69,7 @@ describe("Option-2 Person", () => {
         describe("#introduce", () => {
             it("should overwrite Person introduce, introduce with name, age and class number, given teacher have class", () => {
                 const teacher = new Teacher("Tom", 21, klass);
-                const introduce = person.introduce();
+                const introduce = teacher.introduce();
 
                 expect(introduce).to.equal("My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2.");
 
@@ -77,7 +77,7 @@ describe("Option-2 Person", () => {
 
             it("should overwrite Person introduce, introduce with name, age and class number, given teacher have no class", () => {
                 const teacher = new Teacher("Tom", 21);
-                const introduce = person.introduce();
+                const introduce = teacher.introduce();
 
                 expect(introduce).to.equal("My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.");
 
